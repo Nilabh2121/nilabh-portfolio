@@ -1,0 +1,59 @@
+.n-wrapper{
+    height: 10vh;
+    display:flex;
+    justify-content: space-between;
+}
+
+.n-left{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+
+}
+.n-name{
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+}
+
+.n-right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+.n-list>ul{
+    display: flex;
+    gap: 1.6rem;
+    font-weight: bold;
+    margin-right: 4.2rem;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.n-list>ul>:hover{
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.n-button{
+    flex: 2;
+    width: 8rem;
+   
+    
+}
+@media screen and (max-width: 480px) {
+    .n-list{
+        display: none;
+    }
+    .n-button{
+        display: none;
+    }
+}

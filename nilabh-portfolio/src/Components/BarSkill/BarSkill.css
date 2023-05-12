@@ -1,0 +1,133 @@
+.barskill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 55vh;
+    margin-bottom: 8rem;
+}
+
+.Bs-left{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.Bs-left>:nth-of-type(1){
+    color:black;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+.Bs-left>:nth-of-type(2){
+    color: rgb(255, 41, 152);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+
+
+
+
+.Bs-right{
+    display: flex;
+    flex: 1;
+    gap: 4.5rem;
+    position: relative;
+    animation: floatimage 4s ease-in-out infinite;
+}
+
+.Bs-right{
+        position: absolute;
+        margin-left: 17rem;
+}
+
+
+
+.circle{
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.Achievement span{
+    color: var(--orange);
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+span:nth-of-type(2){
+    margin-left: 10px;
+
+}
+
+.circle::before{
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom, #f3c 0%, #3cf 100%);
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: var(--boxShadow);
+    animation: circlerotate 5s linear infinite;
+    filter: blur(1.5px);
+}
+
+.span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.s-blur2{
+    top:-1rem;
+    width:54rem;
+    height:12rem;
+    right:0rem;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .barskill{
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        height: 25rem;
+    }
+    
+    .Bs-left>:nth-of-type(1){
+        margin-left: 5rem;
+    }
+    .Bs-left>:nth-of-type(2){
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+    }
+    .Bs-right{
+        display: flex;
+        flex: 1;
+        gap: 0rem;
+        margin-left: 0.1rem;
+        margin-top: 20rem;   
+    }
+    
+    .Achievement{
+        flex-direction: coloumn;
+        transform: scale(0.7);
+        
+    }
+}

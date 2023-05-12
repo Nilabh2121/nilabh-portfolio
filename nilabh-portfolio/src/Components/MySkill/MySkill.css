@@ -1,0 +1,103 @@
+.skills{
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height:80vh;
+    margin-bottom: 8rem;
+    margin-top: 9rem;
+    margin-bottom: 13rem;
+    
+}
+
+.S-left{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+}
+.S-left>:nth-child(1){
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.S-left>:nth-child(2){
+    color: rgb(255, 41, 152);
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+}
+.S-left>:nth-child(5){
+    color: var(--orange);
+    font-size: 19px;
+    margin-top: 4rem;
+    font-family: Arial;
+    font-weight: bold;
+    margin-top: 1rem;
+    
+}
+.s-blur1{
+    top:24rem;
+    width:21rem;
+    height:11rem;
+    left:-15rem;
+}
+.s-blur2{
+    top:8rem;
+    width:24rem;
+    height:12rem;
+    left:14rem;
+    
+}
+
+.s-button{
+    width: 12rem;
+    height:2.6rem;
+    margin-top: 4rem;
+    margin-right: 4rem;
+}
+
+.SC-right{
+    position: relative;
+    display: flex;
+    flex: 1;
+}
+.SC-right>*{
+    position: absolute;
+}
+
+
+@media screen and (max-width: 480px) {
+    .skills{
+        margin-top: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 87rem;
+        padding: 0;
+    }
+    .s-button{
+        margin-left: 3rem;
+    }
+
+    .S-left>:nth-child(1){
+        margin-left:3rem ;
+        color: aqua;
+    }
+    .S-left>:nth-child(2){
+        margin-left:5.5rem ;
+    }
+    .S-left>:nth-child(5){
+        margin-left: 1.8rem;
+        margin-right: 1.4rem;
+    }
+
+    .SC-right{
+        display: flex;
+        flex-direction: column;
+        gap: 17rem;
+        
+    }
+    .SC-right>*{
+        position: static;
+        margin-left: 2.4rem;
+
+    }
+}

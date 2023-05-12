@@ -1,0 +1,293 @@
+.About{
+    display: flex;
+    height: 77vh;
+    margin-top: 6rem;
+}
+
+.A-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 1.5;
+}
+
+.A-name{
+    display: flex;
+    flex-direction: column;
+
+}
+.A-name>:nth-child(2){
+    color: var(--black);
+    font-weight: bold;
+    font-size: 2rem;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 2s;
+
+}
+.A-name>:nth-child(3){
+    color: rgb(255, 41, 152);
+    font-weight: bold;
+    font-size:3rem;
+    margin-top: 9px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 2s;
+
+}
+
+.A-name>:nth-child(4){
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-top: 10px;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.A-button{
+    width:7rem;
+    height: 2.2rem;
+    margin-top: 35px;
+    margin-right: 35px;
+    right: 20%;
+    align-items: center;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2.2s;
+}
+
+.A-icons{
+    margin-top: 4.5rem;
+    margin-right: 2rem;
+    display:flex;
+    
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 2.4s;
+}
+
+.A-icons>*{
+    transform: scale(0.5);
+}
+
+.A-icons:hover{
+    cursor: pointer;
+    color: red;
+}
+
+
+
+
+
+.A-right{
+    flex: 1;
+    position: relative;
+}
+
+.A-right>*{
+    position: absolute;
+
+}
+.A-right>:nth-child(2){
+    transform:scale(0.65);
+    top: -16%;
+    left: -24%;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.A-right .glowingcircle{
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 55%;
+    left: 22%;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomIn 1s ease forwards , floatimage 4s ease-in-out infinite;
+    animation-delay: 2.4s 3.1s;
+}
+
+.A-right .glowingcircle::after{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(#f06,#3cf);
+    filter: blur(5px);
+    animation: circlerotate 5s linear infinite;
+    border-radius: 50%;
+}
+
+.emoji{
+    transform: scale(0.6%);
+    top: -19%;
+    left: -24%;
+    border-radius: 50%;
+}
+
+.glowingcircle .dp{
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.dp img{
+    max-width: 352px;
+    object-fit: cover;
+    border-radius: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15px;
+    bottom: 15px;
+}
+
+
+.glowingcircle span:nth-child(1){
+    filter:blur(10px);
+
+}
+
+.blur{
+    position: absolute;
+    width: 20rem;
+    height:14rem;
+    border-radius: 50%;
+    background: #edd0ff;
+    z-index: -8;
+    top: -18%;
+    left: 56%;
+    filter: blur(66px);
+}
+
+
+@keyframes slideRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTop {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatimage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes circlerotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 480px) {
+    .About{
+        flex-direction: column;
+        margin-top: 3rem;
+        height: 64rem;
+        gap: 6rem;
+    }
+    .A-left{
+        justify-content: center; 
+    }
+    .A-name>:nth-child(3){
+        font-size: 2.5rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
+        margin-left: 0.8rem;
+        flex-direction: row;
+    }
+
+    .A-button{
+        margin-left: 5rem;
+        margin-top: 2rem;
+    }
+
+    .A-icons{
+        margin-left: 2rem;
+    }
+    .A-right{
+        transform: scale(0.9);
+        
+    }
+    .A-right .blur{
+        display: none;
+    }
+
+    .floating-div1{
+        top: -2rem !important;
+        transform: scale(0.7);
+        margin-right: 10rem;
+    }
+    .floating-div2{
+        transform: scale(0.7);
+        margin-top: -2rem;
+        
+    }
+
+    .glowingcircle{
+        justify-content: center;
+        margin-left: 1rem;
+    }
+}
+
+

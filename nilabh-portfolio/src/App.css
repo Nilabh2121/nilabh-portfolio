@@ -1,0 +1,54 @@
+:root
+{
+  --yellow: #F5C32C;
+    --orange : #FCA61F;
+    --black : #242D49;
+    --gray : #788097;
+    --blueCard : #DDF8FE;
+    --purple: rgb(238 210 255);
+    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard: rgba(246, 95, 203, 0.45);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+    --mixture: linear-gradient(#f06,#3cf);
+    --container-width-lg:75%;
+    --container-width-md:86%;
+    --container-width-ms:90%;
+}
+
+.App{
+    padding: 0.5rem 3.5rem;
+    overflow: hidden;
+    color: var(--black);   
+    background-color: none;
+  
+}
+
+
+.button{
+  border-radius: 34px;
+  border: 2px solid skyblue;
+  font-weight: bold;
+  color: rgb(6, 6, 6);
+  font-size: 16px;
+  padding: 10px 25px 10px 25px;
+  background: linear-gradient(180deg, #0CCDA3 26.71%, #C1FCD3 99.36%);
+  box-shadow: 0px 4px 4px 1px rgba(96, 236, 231, 0.519);
+}
+
+.n-button:hover{
+  background: white;
+  font-weight: bold;
+  font-style: italic;
+  cursor:pointer;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+}
+
+@media screen and (max-width: 480px) {
+  .App{
+    padding: 0.5rem 1.2rem;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
